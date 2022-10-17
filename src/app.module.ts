@@ -24,7 +24,7 @@ import { UserModule } from './user/user.module';
         password: configService.get('database.password'),
         database: configService.get('database.name'),
         entities: [join(__dirname, '/**/*.entity.js')],
-        synchronize: false,
+        synchronize: true,
       }),
     }),
     UserModule,

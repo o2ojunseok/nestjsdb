@@ -14,11 +14,16 @@ export class UserService {
     return this.userRepository.find();
   }
 
-  async create(user: User): Promise<void> {
+  async signUp(user: User): Promise<void> {
     await this.userRepository.save(user);
   }
 
   async delete(id: number): Promise<void> {
     await this.userRepository.delete(id);
   }
+
+  // async logout(session) {
+  //   await session.destroyed();
+  //   return {ret_code: 0, msg: 'logout success'}
+  // }
 }
